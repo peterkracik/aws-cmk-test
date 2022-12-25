@@ -34,7 +34,8 @@ resource "aws_lambda_function" "lambda_unencrypted" {
 
   environment {
     variables = {
-      S3_BUCKET = aws_s3_bucket.s3_unencrypted.id
+      S3_ENCRYPTED_BUCKET = aws_s3_bucket.s3_encrypted.id
+      S3_UNENCRYPTED_BUCKET = aws_s3_bucket.s3_unencrypted.id
     }
   }
 }

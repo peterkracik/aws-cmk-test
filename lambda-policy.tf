@@ -11,8 +11,6 @@ resource "aws_iam_policy" "lambda_s3_policy" {
         "Effect" : "Allow",
         "Action" : [
           "s3:GetObject",
-          "s3:PutObject",
-          "s3:ListBucket",
         ],
         "Resource" : [
           "${aws_s3_bucket.s3_encrypted.arn}",
